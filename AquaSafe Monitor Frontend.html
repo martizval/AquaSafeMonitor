@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaSafe Monitor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center">AquaSafe Monitor</h2>
+                <p class="text-center text-muted">Ingresa los datos de monitoreo de agua superficial para obtener un análisis de causas y soluciones.</p>
+                <form action="/submit" method="post">
+                    <div class="form-group">
+                        <label for="location">Ubicación:</label>
+                        <input type="text" id="location" name="location" class="form-control" placeholder="Ej. Cajamarca, Cajamarca, Encañada" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parameter">Parámetro Detectado:</label>
+                        <input type="text" id="parameter" name="parameter" class="form-control" placeholder="Ej. Cesio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="concentration">Concentración (mg/L):</label>
+                        <input type="number" id="concentration" name="concentration" step="0.001" class="form-control" placeholder="Ej. 2.023" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Analizar Datos</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
